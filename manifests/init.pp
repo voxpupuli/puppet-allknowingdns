@@ -51,6 +51,19 @@ class allknowingdns(
   $package_name   = 'all-knowing-dns',
 ) {
 
+  validate_array($listen)
+  validate_string($address_prefix)
+
+  if $upstream != 'UNSET' {
+    if ! is_ip_address($upstream) {
+      fail("${upstream} is not a valid IP address")
+    }
+  }
+
+  if ! is_domain_name($address) {
+    fail("${address} is not a valid domaine name")
+  }
+
   package {$package_name:
     ensure => installed;
   }
