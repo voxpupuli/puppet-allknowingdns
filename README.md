@@ -33,16 +33,17 @@ A [Puppet Module](http://docs.puppetlabs.com/learning/modules1.html#modules) is 
 
 # Usage
 
-```
-  class {
-    'allknowingdns':
-      fooboozoo => 'foobar',
-  }
+```puppet
+class { 'allknowingdns':
+  listen  => ['2001:4d88:100e:1::3','79.140.39.197'],
+  network => '2001:4d88:100e:ccc0::/64',
+  address => 'nutzer.raumzeitlabor.de',
+}
 ```
 
 # Limitations
 
-- Support only debian for the moment.
+- Tested only debian for the moment.
 
 # Development
 

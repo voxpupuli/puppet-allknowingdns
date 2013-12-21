@@ -1,0 +1,14 @@
+# MANAGED BY PUPPET
+# Module:: allknowingdns
+
+# Configuration file for AllKnowingDNS v1.3
+
+#FIXME IPv6 listen seems not working (fixed in v1.7)
+<% [@listen].flatten.each do |listenip| -%>
+listen <%= listenip %>
+<% end -%>
+
+# Uniquement des netmasks multiples de 16
+network <%= @network %>
+  resolves to <% if @address_prefix != 'UNSET' -%><%= @address_prefix %><% end -%>%DIGITS%.<%= @address %>
+  <% if @upstream != 'UNSET' -%>with upstream <%= @upstream %><% end -%>
