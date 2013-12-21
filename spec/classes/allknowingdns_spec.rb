@@ -44,7 +44,8 @@ describe 'allknowingdns', :type => :class do
   context 'With params' do
     let(:params) { params_set }
 
-    it { should contain_file('/etc/all-knowing-dns.conf').with_content(/listen #{params_set[:listen]}/)}
+    it { should contain_file('/etc/all-knowing-dns.conf').with_content(/listen #{params_set[:listen][0]}/)}
+    it { should contain_file('/etc/all-knowing-dns.conf').with_content(/listen #{params_set[:listen][1]}/)}
     it { should contain_file('/etc/all-knowing-dns.conf').with_content(/network #{params_set[:network]}/)}
     it { should contain_file('/etc/all-knowing-dns.conf').with_content(/resolves to ipv6-%DIGITS%.#{params_set[:address]}/)}
     context 'Without prefix address' do
