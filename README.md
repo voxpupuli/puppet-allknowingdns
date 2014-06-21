@@ -8,10 +8,9 @@ See this [website](http://all-knowing-dns.zekjur.net/) for more informations.
 
 1. [Overview](#overview)
 2. [Module description](#module-description)
-3. [Parameters](#parameters)
+   * [Dependencies](#dependencies)
 4. [Usage](#usage)
-    * [Basic usage](#basic-usage)
-5. [Limitation](#limitation)
+5. [Limitations](#limitations)
 6. [Development](#development)
 
 # Overview
@@ -35,9 +34,21 @@ A [Puppet Module](http://docs.puppetlabs.com/learning/modules1.html#modules) is 
 
 ```puppet
 class { 'allknowingdns':
-  listen  => ['2001:4d88:100e:1::3','79.140.39.197'],
-  network => '2001:4d88:100e:ccc0::/64',
-  address => 'nutzer.raumzeitlabor.de',
+  listen  => ['2001:db8:42::1', '203.0.113.1'],
+  network => '2001:db8:1337::/48',
+  address => 'example.com',
+}
+```
+
+```puppet
+class { 'allknowingdns':
+  listen     => ['2001:db8:42::1', '203.0.113.1'],
+  network    => '2001:db8:1337::/48',
+  address    => 'example.com',
+  exceptions => {
+    '2001:db8:1337::1' => 'a.example.com',
+    '2001:db8:1337::2' => 'b.example.com'
+  }
 }
 ```
 
