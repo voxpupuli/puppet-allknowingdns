@@ -8,7 +8,17 @@
 listen <%= listenip %>
 <% end -%>
 
-# Uniquement des netmasks multiples de 16
+# Only masks multiple of 16!
+
+## Exceptions
+<% if !@exceptions.empty? -%>
+<% @exceptions.map do |ip, addr| -%>
+network <%= @ip/128 %>
+  resolves to <%= @addr %>
+<% end -%>
+<% end -%>
+
+# Default
 network <%= @network %>
   resolves to <% if @address_prefix != 'UNSET' -%><%= @address_prefix %><% end -%>%DIGITS%.<%= @address %>
   <% if @upstream != 'UNSET' -%>with upstream <%= @upstream %><% end -%>

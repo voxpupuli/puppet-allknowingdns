@@ -21,6 +21,10 @@
 #   Specifies the address prefix (before %DIGITS%) to which PTR records should resolve.
 #   Default: ipv6-
 #
+# [*exceptions*]
+#   Specifies exceptions (specific addresses for IPv6 /128)
+#   Default: {}
+#
 # [*upstream*]
 #   Before answering a PTR query for this network,
 #   AllKnowingDNS will ask the DNS server at address first, appending .upstream to the query.
@@ -28,14 +32,25 @@
 # === Examples
 #
 #  class { 'allknowingdns':
-#    listen  => ['2001:4d88:100e:1::3','79.140.39.197'],
-#    network => '2001:4d88:100e:ccc0::/64',
-#    address => 'nutzer.raumzeitlabor.de',
+#    listen  => ['2001:db8:42::1', '203.0.113.1'],
+#    network => '2001:db8:1337::/48',
+#    address => 'example.com',
+#  }
+#
+#  class { 'allknowingdns':
+#    listen     => ['2001:db8:42::1', '203.0.113.1'],
+#    network    => '2001:db8:1337::/48',
+#    address    => 'example.com',
+#    exceptions => {
+#      '2001:db8:1337::1' => 'a.example.com',
+#      '2001:db8:1337::2' => 'b.example.com'
+#    }
 #  }
 #
 # === Authors
 #
 # Sebastien Badia <http://sebian.fr>
+# Julien Vaubourg <http://julien.vaubourg.com>
 #
 # === Copyright
 #
@@ -47,12 +62,14 @@ class allknowingdns(
   $network        = 'UNSET',
   $address        = 'UNSET',
   $address_prefix = 'ipv6-',
+  $exceptions     = {},
   $upstream       = 'UNSET',
   $package_name   = 'all-knowing-dns',
 ) {
 
   validate_array($listen)
   validate_string($address_prefix)
+  validate_hash($exceptions)
 
   if $upstream != 'UNSET' {
     if ! is_ip_address($upstream) {
