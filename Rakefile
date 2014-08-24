@@ -8,9 +8,6 @@ require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 
 PuppetLint.configuration.send('disable_80chars')
-PuppetLint.configuration.send('disable_variable_scope')
-#TODO http://puppet-lint.com/checks/class_inherits_from_params_class/
-PuppetLint.configuration.send('disable_class_inherits_from_params_class')
 PuppetLint.configuration.fail_on_warnings = true
 
 def get_version
@@ -98,5 +95,7 @@ namespace :module do
 end
 
 task(:default).clear
-task :default => [:spec, :lint]
+task :default => [:spec_prep, :spec_standalone, :lint]
 
+desc 'Run syntax, lint and spec tests'
+task :test => [:syntax,:lint,:spec]
