@@ -14,7 +14,7 @@ PuppetLint.configuration.send('disable_class_inherits_from_params_class')
 PuppetLint.configuration.fail_on_warnings = true
 
 def get_version
-  if File.read(File.join(TDIR, 'Modulefile')) =~ /(\d+)\.(\d+)\.(\d+)/
+  if File.read(File.join(TDIR, 'metadata.json')) =~ /(\d+)\.(\d+)\.(\d+)/
     return [$1.to_i, $2.to_i, $3.to_i].compact.join('.')
   end
 end # def:: get_version
@@ -40,9 +40,9 @@ def bump_version(level)
   end
 
   new_version = [major,minor,patch].compact.join('.')
-  v = File.read(File.join(TDIR,'Modulefile')).chomp
+  v = File.read(File.join(TDIR,'metadata.json')).chomp
   v.gsub!(/\w+\s'(\d+)\.(\d+)\.(\d+)'/,"version\ '#{new_version}'")
-  File.open(File.join(TDIR,'Modulefile'), 'w') do |file|
+  File.open(File.join(TDIR,'metadata.json'), 'w') do |file|
     file.puts v
   end
 end # def:: bump_version(level)

@@ -1,0 +1,30 @@
+{
+  "name": "sbadia-allknowingdns",
+  "version": "1.0.0",
+  "author": "Sebastien Badia",
+  "summary": "Puppet AllKnowingDNS Module",
+  "license": "GPLv3",
+  "source": "https://github.com/sbadia/puppet-allknowingdns",
+  "project_page": "https://github.com/sbadia/puppet-allknowingdns/",
+  "issues_url": "https://github.com/sbadia/puppet-allknowingdns/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "description": "Module to install AllKnowingDNS using puppet",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.1.0"}
+  ]
+}
