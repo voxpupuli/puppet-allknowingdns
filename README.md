@@ -1,4 +1,8 @@
-# Puppet-allknowingdns [![Build Status](https://travis-ci.org/sbadia/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/sbadia/puppet-allknowingdns)
+# Puppet-allknowingdns
+
+[![Build Status](https://travis-ci.org/sbadia/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/sbadia/puppet-allknowingdns)
+[![Puppet Forge](http://img.shields.io/puppetforge/v/sbadia/allknowingdns.svg)](https://forge.puppetlabs.com/sbadia/allknowingdns)
+[![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 
 [all-knowing-dns](https://metacpan.org/release/AllKnowingDNS) - Tiny DNS server for IPv6 Reverse DNS 
 
@@ -55,6 +59,14 @@ class { 'allknowingdns':
 # Limitations
 
 - Tested only debian for the moment.
+
+# Contributors
+
+* https://github.com/sbadia/puppet-allknowingdns/graphs/contributors
+
+# Release Notes
+
+See [CHANGELOG](https://github.com/sbadia/puppet-allknowingdns/blob/master/CHANGELOG.md) file.
 
 # Development
 
