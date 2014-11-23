@@ -29,6 +29,10 @@
 #   Before answering a PTR query for this network,
 #   AllKnowingDNS will ask the DNS server at address first, appending .upstream to the query.
 #
+# [*package_name*]
+#   All-knowing-dns package name (depends on distribution)
+#   Default to 'all-knowing-dns'
+#
 # === Examples
 #
 #  class { 'allknowingdns':
