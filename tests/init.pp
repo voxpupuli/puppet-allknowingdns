@@ -1,1 +1,1 @@
-include allknowingdns
+include ::allknowingdns
