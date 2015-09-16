@@ -59,7 +59,7 @@ describe 'allknowingdns', :type => :class do
     end
     context 'With upstream' do
       let(:params) { params_set.merge({ :upstream => '2001:4d88:100e:1::2' }) }
-      it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream #{params_set[:upstream]}/)}
+      it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream 2001:4d88:100e:1::2/)}
     end
   end
 end
