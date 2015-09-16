@@ -12,11 +12,6 @@ describe 'allknowingdns', :type => :class do
   end
 
   describe 'input validation' do
-    describe 'invalid upstream' do
-      let(:params) { params_set.merge({ :upstream => '1.2.3.4.1' }) }
-      it_raises 'a Puppet::Error', /is not a valid IP address/
-    end
-
     describe 'invalid address' do
       #https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/lib/puppet/parser/functions/is_domain_name.rb
       let(:params) {{ :address => 'wrong%domain.net' }}
@@ -58,8 +53,18 @@ describe 'allknowingdns', :type => :class do
       it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/resolves to adsl.ipv6.%DIGITS%.#{params_set[:address]}/)}
     end
     context 'With upstream' do
-      let(:params) { params_set.merge({ :upstream => '2001:4d88:100e:1::2' }) }
-      it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream #{params_set[:upstream]}/)}
+      context 'set to an IPv6 address' do
+        let(:params) { params_set.merge({ :upstream => '2001:4d88:100e:1::2' }) }
+        it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream 2001:4d88:100e:1::2/)}
+      end
+      context 'set to an IPv4 address' do
+        let(:params) { params_set.merge({ :upstream => '8.8.8.8' }) }
+        it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream 8.8.8.8/)}
+      end
+      context 'set to a hostname' do
+        let(:params) { params_set.merge({ :upstream => 'google-public-dns-a.google.com' }) }
+        it { is_expected.to contain_file('/etc/all-knowing-dns.conf').with_content(/with upstream google-public-dns-a.google.com/)}
+      end
     end
   end
 end
