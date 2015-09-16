@@ -75,12 +75,6 @@ class allknowingdns(
   validate_string($address_prefix)
   validate_hash($exceptions)
 
-  if $upstream != 'UNSET' {
-    if ! is_ip_address($upstream) {
-      fail("${upstream} is not a valid IP address")
-    }
-  }
-
   if ! is_domain_name($address) {
     fail("${address} is not a valid domaine name")
   }
