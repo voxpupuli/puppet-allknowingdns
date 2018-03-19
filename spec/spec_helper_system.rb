@@ -23,6 +23,6 @@ RSpec.configure do |c|
     puppet_install
 
     # => install allknowingdns and stdlib (dep.)
-    puppet_module_install(:source => proj_root, :module_name => 'allknowingdns')
+    puppet_module_install(source: proj_root, module_name: 'allknowingdns')
   end
 end
