@@ -1,12 +1,12 @@
 {
-  "name": "sbadia-allknowingdns",
+  "name": "puppet-allknowingdns",
   "version": "1.0.1",
   "author": "Sebastien Badia",
   "summary": "Puppet AllKnowingDNS Module",
   "license": "GPL-3.0",
-  "source": "https://github.com/sbadia/puppet-allknowingdns",
-  "project_page": "https://github.com/sbadia/puppet-allknowingdns/",
-  "issues_url": "https://github.com/sbadia/puppet-allknowingdns/issues",
+  "source": "https://github.com/voxpupuli/puppet-allknowingdns",
+  "project_page": "https://github.com/voxpupuli/puppet-allknowingdns/",
+  "issues_url": "https://github.com/voxpupuli/puppet-allknowingdns/issues",
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",

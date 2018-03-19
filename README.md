@@ -1,10 +1,10 @@
 # Puppet-allknowingdns
 
-[![Build Status](https://travis-ci.org/sbadia/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/sbadia/puppet-allknowingdns)
-[![Puppet Forge](http://img.shields.io/puppetforge/v/sbadia/allknowingdns.svg)](https://forge.puppetlabs.com/sbadia/allknowingdns)
+[![Build Status](https://travis-ci.org/voxpupuli/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/voxpupuli/puppet-allknowingdns)
+[![Puppet Forge](http://img.shields.io/puppetforge/v/voxpupuli/allknowingdns.svg)](https://forge.puppetlabs.com/voxpupuli/allknowingdns)
 [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 
-[all-knowing-dns](https://metacpan.org/release/AllKnowingDNS) - Tiny DNS server for IPv6 Reverse DNS 
+[all-knowing-dns](https://metacpan.org/release/AllKnowingDNS) - Tiny DNS server for IPv6 Reverse DNS
 
 See this [website](http://all-knowing-dns.zekjur.net/) for more informations.
 
@@ -29,7 +29,7 @@ A [Puppet Module](http://docs.puppetlabs.com/learning/modules1.html#modules) is 
 
 # Module description
 
-- [puppet-allknowingdns](http://forge.puppetlabs.com/sbadia/allknowingdns) on puppet forge.
+- [puppet-allknowingdns](http://forge.puppetlabs.com/voxpupuli/allknowingdns) on puppet forge.
 
 ## Dependencies
 - [puppetlabs/puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib) >= 4.1.0
@@ -62,11 +62,11 @@ class { 'allknowingdns':
 
 # Contributors
 
-* https://github.com/sbadia/puppet-allknowingdns/graphs/contributors
+* https://github.com/voxpupuli/puppet-allknowingdns/graphs/contributors
 
 # Release Notes
 
-See [CHANGELOG](https://github.com/sbadia/puppet-allknowingdns/blob/master/CHANGELOG.md) file.
+See [CHANGELOG](https://github.com/voxpupuli/puppet-allknowingdns/blob/master/CHANGELOG.md) file.
 
 # Development
 
