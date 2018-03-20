@@ -2,13 +2,16 @@
 
 [![Build Status](https://travis-ci.org/voxpupuli/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/voxpupuli/puppet-allknowingdns)
 [![Puppet Forge](http://img.shields.io/puppetforge/v/voxpupuli/allknowingdns.svg)](https://forge.puppetlabs.com/voxpupuli/allknowingdns)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
 [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 
 [all-knowing-dns](https://metacpan.org/release/AllKnowingDNS) - Tiny DNS server for IPv6 Reverse DNS
 
 See this [website](http://all-knowing-dns.zekjur.net/) for more informations.
 
-#### Table of contents
+## Table of contents
 
 1. [Overview](#overview)
 2. [Module description](#module-description)
@@ -16,8 +19,9 @@ See this [website](http://all-knowing-dns.zekjur.net/) for more informations.
 4. [Usage](#usage)
 5. [Limitations](#limitations)
 6. [Development](#development)
+7. [Authors](#authors)
 
-# Overview
+## Overview
 
 AllKnowingDNS provides reverse DNS for IPv6 networks which use SLAAC (autoconf), e.g. for a /64 network.
 
@@ -32,9 +36,10 @@ A [Puppet Module](http://docs.puppetlabs.com/learning/modules1.html#modules) is 
 - [puppet-allknowingdns](http://forge.puppetlabs.com/voxpupuli/allknowingdns) on puppet forge.
 
 ## Dependencies
+
 - [puppetlabs/puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib) >= 4.1.0
 
-# Usage
+## Usage
 
 ```puppet
 class { 'allknowingdns':
@@ -56,18 +61,22 @@ class { 'allknowingdns':
 }
 ```
 
-# Limitations
+## Limitations
 
 - Tested only debian for the moment.
 
-# Contributors
+## Contributors
 
 * https://github.com/voxpupuli/puppet-allknowingdns/graphs/contributors
 
-# Release Notes
+## Release Notes
 
 See [CHANGELOG](https://github.com/voxpupuli/puppet-allknowingdns/blob/master/CHANGELOG.md) file.
 
-# Development
+## Development
 
 Want to help - send a pull request.
+
+## Authors
+
+This module got migrated from sbadia to Vox Pupuli
