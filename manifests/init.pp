@@ -62,18 +62,14 @@
 # See LICENSE file.
 #
 class allknowingdns(
-  $listen         = ['::1','127.0.0.1'],
-  $network        = 'UNSET',
-  $address        = 'UNSET',
-  $address_prefix = 'ipv6-',
-  $exceptions     = {},
-  $upstream       = 'UNSET',
-  $package_name   = 'all-knowing-dns',
+  Array[Stdlib::IP::Address] $listen = ['::1','127.0.0.1'],
+  $network                           = 'UNSET',
+  $address                           = 'UNSET',
+  String[1] $address_prefix          = 'ipv6-',
+  Hash $exceptions                   = {},
+  $upstream                          = 'UNSET',
+  $package_name                      = 'all-knowing-dns',
 ) {
-
-  validate_array($listen)
-  validate_string($address_prefix)
-  validate_hash($exceptions)
 
   if ! is_domain_name($address) {
     fail("${address} is not a valid domaine name")
