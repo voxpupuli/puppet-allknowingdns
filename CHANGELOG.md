@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.0.0](https://github.com/voxpupuli/puppet-allknowingdns/tree/v2.0.0) (2019-03-03)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v1.1.1...v2.0.0)
+
+**Breaking changes:**
+
+- modulesync 2.5.1 & drop Puppet 4 [\#25](https://github.com/voxpupuli/puppet-allknowingdns/pull/25) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- replace validate\_\* with datatypes; require at least stdlib  4.25.0 [\#23](https://github.com/voxpupuli/puppet-allknowingdns/pull/23) ([bastelfreak](https://github.com/bastelfreak))
+- modulesync 2.1.0 and allow puppet 6.x [\#19](https://github.com/voxpupuli/puppet-allknowingdns/pull/19) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v1.1.1](https://github.com/voxpupuli/puppet-allknowingdns/tree/v1.1.1) (2018-09-07)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v1.1.0...v1.1.1)
