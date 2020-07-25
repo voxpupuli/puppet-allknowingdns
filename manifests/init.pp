@@ -61,7 +61,7 @@
 # Copyleft 2013 Sebastien Badia.
 # See LICENSE file.
 #
-class allknowingdns(
+class allknowingdns (
   Array[Stdlib::IP::Address] $listen = ['::1','127.0.0.1'],
   $network                           = 'UNSET',
   $address                           = 'UNSET',
@@ -70,16 +70,15 @@ class allknowingdns(
   $upstream                          = 'UNSET',
   $package_name                      = 'all-knowing-dns',
 ) {
-
   if ! is_domain_name($address) {
     fail("${address} is not a valid domaine name")
   }
 
-  package {$package_name:
+  package { $package_name:
     ensure => installed;
   }
 
-  file {"/etc/${package_name}.conf":
+  file { "/etc/${package_name}.conf":
     ensure  => file,
     owner   => 'root',
     group   => 'root',
@@ -89,12 +88,11 @@ class allknowingdns(
     require => Package[$package_name],
   }
 
-  service {$package_name:
+  service { $package_name:
     ensure     => running,
     enable     => true,
     hasstatus  => true,
     hasrestart => true,
     require    => Package[$package_name];
   }
-
 } # Class:: allknowingdns
