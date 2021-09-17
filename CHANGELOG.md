@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.0.0](https://github.com/voxpupuli/puppet-allknowingdns/tree/v3.0.0) (2021-09-17)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v2.0.0...v3.0.0)
+
+**Breaking changes:**
+
+- Drop Ubuntu 14; Add 18/20 support; Drop Puppet 5 and add Puppet 7 support [\#43](https://github.com/voxpupuli/puppet-allknowingdns/pull/43) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Allow stdlib 8.0.0 [\#41](https://github.com/voxpupuli/puppet-allknowingdns/pull/41) ([smortex](https://github.com/smortex))
+- Add puppet-strings docs [\#38](https://github.com/voxpupuli/puppet-allknowingdns/pull/38) ([baurmatt](https://github.com/baurmatt))
+- modulesync 3.0.0 & puppet-lint updates [\#37](https://github.com/voxpupuli/puppet-allknowingdns/pull/37) ([bastelfreak](https://github.com/bastelfreak))
+- update repo links to https [\#35](https://github.com/voxpupuli/puppet-allknowingdns/pull/35) ([bastelfreak](https://github.com/bastelfreak))
+- Allow puppetlabs/stdlib 6.x [\#33](https://github.com/voxpupuli/puppet-allknowingdns/pull/33) ([dhoppe](https://github.com/dhoppe))
+- Remove duplicate CONTRIBUTING.md file [\#30](https://github.com/voxpupuli/puppet-allknowingdns/pull/30) ([dhoppe](https://github.com/dhoppe))
+
 ## [v2.0.0](https://github.com/voxpupuli/puppet-allknowingdns/tree/v2.0.0) (2019-03-03)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v1.1.1...v2.0.0)

@@ -10,7 +10,7 @@
 
 ## Classes
 
-### `allknowingdns`
+### <a name="allknowingdns"></a>`allknowingdns`
 
 Install and configure allknowingdns using puppet.
 
@@ -42,9 +42,17 @@ class { 'allknowingdns':
 
 #### Parameters
 
-The following parameters are available in the `allknowingdns` class.
+The following parameters are available in the `allknowingdns` class:
 
-##### `listen`
+* [`listen`](#listen)
+* [`network`](#network)
+* [`address`](#address)
+* [`address_prefix`](#address_prefix)
+* [`exceptions`](#exceptions)
+* [`upstream`](#upstream)
+* [`package_name`](#package_name)
+
+##### <a name="listen"></a>`listen`
 
 Data type: `Array[Stdlib::IP::Address]`
 
@@ -52,7 +60,7 @@ Listens on the given address (IPv4 and IPv6 is supported) on port 53.
 
 Default value: `['::1','127.0.0.1']`
 
-##### `network`
+##### <a name="network"></a>`network`
 
 Data type: `Any`
 
@@ -60,7 +68,7 @@ Specifies that queries for PTR records within the given network should be answer
 
 Default value: `'UNSET'`
 
-##### `address`
+##### <a name="address"></a>`address`
 
 Data type: `Any`
 
@@ -68,7 +76,7 @@ Specifies the address to which PTR records should resolve. When answering AAAA q
 
 Default value: `'UNSET'`
 
-##### `address_prefix`
+##### <a name="address_prefix"></a>`address_prefix`
 
 Data type: `String[1]`
 
@@ -76,7 +84,7 @@ Specifies the address prefix (before %DIGITS%) to which PTR records should resol
 
 Default value: `'ipv6-'`
 
-##### `exceptions`
+##### <a name="exceptions"></a>`exceptions`
 
 Data type: `Hash`
 
@@ -84,7 +92,7 @@ Specifies exceptions (specific addresses for IPv6 /128)
 
 Default value: `{}`
 
-##### `upstream`
+##### <a name="upstream"></a>`upstream`
 
 Data type: `Any`
 
@@ -92,7 +100,7 @@ Before answering a PTR query for this network, AllKnowingDNS will ask the DNS se
 
 Default value: `'UNSET'`
 
-##### `package_name`
+##### <a name="package_name"></a>`package_name`
 
 Data type: `String[1]`
 
