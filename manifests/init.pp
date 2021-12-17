@@ -24,11 +24,11 @@
 #  }
 class allknowingdns (
   Array[Stdlib::IP::Address] $listen = ['::1','127.0.0.1'],
-  $network                           = 'UNSET',
-  $address                           = 'UNSET',
+  String[1] $network                 = 'UNSET',
+  String[1] $address                 = 'UNSET',
   String[1] $address_prefix          = 'ipv6-',
   Hash $exceptions                   = {},
-  $upstream                          = 'UNSET',
+  String[1] $upstream                = 'UNSET',
   String[1] $package_name            = 'all-knowing-dns',
 ) {
   if ! is_domain_name($address) {

@@ -62,7 +62,7 @@ Default value: `['::1','127.0.0.1']`
 
 ##### <a name="network"></a>`network`
 
-Data type: `Any`
+Data type: `String[1]`
 
 Specifies that queries for PTR records within the given network should be answered (any query for an unconfigured network will be answered with NXDOMAIN). You need to specify at least the resolves to directive afterwards.
 
@@ -70,7 +70,7 @@ Default value: `'UNSET'`
 
 ##### <a name="address"></a>`address`
 
-Data type: `Any`
+Data type: `String[1]`
 
 Specifies the address to which PTR records should resolve. When answering AAAA queries, %DIGITS% will be parsed and converted back to an IPv6 address.
 
@@ -94,7 +94,7 @@ Default value: `{}`
 
 ##### <a name="upstream"></a>`upstream`
 
-Data type: `Any`
+Data type: `String[1]`
 
 Before answering a PTR query for this network, AllKnowingDNS will ask the DNS server at address first, appending .upstream to the query.
 
