@@ -1,10 +1,14 @@
+# frozen_string_literal: true
+
 require 'rspec-system/spec_helper'
 require 'rspec-system-puppet/helpers'
 require 'rspec-system-serverspec/helpers'
 
+# rubocop:disable Style/MixinUsage
 include RSpecSystemPuppet::Helpers
 include Serverspec::Helper::RSpecSystem
 include Serverspec::Helper::DetectOS
+# rubocop:enable Style/MixinUsage
 
 RSpec.configure do |c|
   # Project root
