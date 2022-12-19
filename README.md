@@ -1,11 +1,13 @@
 # Puppet-allknowingdns
 
-[![Build Status](https://travis-ci.org/voxpupuli/puppet-allknowingdns.png?branch=master)](https://travis-ci.org/voxpupuli/puppet-allknowingdns)
-[![Puppet Forge](http://img.shields.io/puppetforge/v/voxpupuli/allknowingdns.svg)](https://forge.puppetlabs.com/voxpupuli/allknowingdns)
+[![Build Status](https://github.com/voxpupuli/puppet-allknowingdns/workflows/CI/badge.svg)](https://github.com/voxpupuli/puppet-allknowingdns/actions?query=workflow%3ACI)
+[![Release](https://github.com/voxpupuli/puppet-allknowingdns/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-allknowingdns/actions/workflows/release.yml)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
 [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
 [![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/allknowingdns.svg)](https://forge.puppetlabs.com/puppet/allknowingdns)
-[![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
+[![puppetmodule.info docs](http://www.puppetmodule.info/images/badge.png)](http://www.puppetmodule.info/m/puppet-allknowingdns)
+[![AGPL v3 License](https://img.shields.io/github/license/voxpupuli/puppet-allknowingdns.svg)](LICENSE)
 
 [all-knowing-dns](https://metacpan.org/release/AllKnowingDNS) - Tiny DNS server for IPv6 Reverse DNS
 
