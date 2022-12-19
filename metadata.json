@@ -1,6 +1,6 @@
 {
   "name": "puppet-allknowingdns",
-  "version": "3.0.1",
+  "version": "3.0.2-rc0",
   "author": "Vox Pupuli",
   "summary": "Puppet AllKnowingDNS Module",
   "license": "GPL-3.0",
