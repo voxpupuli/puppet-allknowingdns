@@ -44,15 +44,15 @@ class { 'allknowingdns':
 
 The following parameters are available in the `allknowingdns` class:
 
-* [`listen`](#listen)
-* [`network`](#network)
-* [`address`](#address)
-* [`address_prefix`](#address_prefix)
-* [`exceptions`](#exceptions)
-* [`upstream`](#upstream)
-* [`package_name`](#package_name)
+* [`listen`](#-allknowingdns--listen)
+* [`network`](#-allknowingdns--network)
+* [`address`](#-allknowingdns--address)
+* [`address_prefix`](#-allknowingdns--address_prefix)
+* [`exceptions`](#-allknowingdns--exceptions)
+* [`upstream`](#-allknowingdns--upstream)
+* [`package_name`](#-allknowingdns--package_name)
 
-##### <a name="listen"></a>`listen`
+##### <a name="-allknowingdns--listen"></a>`listen`
 
 Data type: `Array[Stdlib::IP::Address]`
 
@@ -60,7 +60,7 @@ Listens on the given address (IPv4 and IPv6 is supported) on port 53.
 
 Default value: `['::1','127.0.0.1']`
 
-##### <a name="network"></a>`network`
+##### <a name="-allknowingdns--network"></a>`network`
 
 Data type: `String[1]`
 
@@ -68,7 +68,7 @@ Specifies that queries for PTR records within the given network should be answer
 
 Default value: `'UNSET'`
 
-##### <a name="address"></a>`address`
+##### <a name="-allknowingdns--address"></a>`address`
 
 Data type: `String[1]`
 
@@ -76,7 +76,7 @@ Specifies the address to which PTR records should resolve. When answering AAAA q
 
 Default value: `'UNSET'`
 
-##### <a name="address_prefix"></a>`address_prefix`
+##### <a name="-allknowingdns--address_prefix"></a>`address_prefix`
 
 Data type: `String[1]`
 
@@ -84,7 +84,7 @@ Specifies the address prefix (before %DIGITS%) to which PTR records should resol
 
 Default value: `'ipv6-'`
 
-##### <a name="exceptions"></a>`exceptions`
+##### <a name="-allknowingdns--exceptions"></a>`exceptions`
 
 Data type: `Hash`
 
@@ -92,7 +92,7 @@ Specifies exceptions (specific addresses for IPv6 /128)
 
 Default value: `{}`
 
-##### <a name="upstream"></a>`upstream`
+##### <a name="-allknowingdns--upstream"></a>`upstream`
 
 Data type: `String[1]`
 
@@ -100,7 +100,7 @@ Before answering a PTR query for this network, AllKnowingDNS will ask the DNS se
 
 Default value: `'UNSET'`
 
-##### <a name="package_name"></a>`package_name`
+##### <a name="-allknowingdns--package_name"></a>`package_name`
 
 Data type: `String[1]`
 

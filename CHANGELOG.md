@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.0.1](https://github.com/voxpupuli/puppet-allknowingdns/tree/v3.0.1) (2022-12-19)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v3.0.0...v3.0.1)
+
+**Fixed bugs:**
+
+- Update badges in README.md [\#49](https://github.com/voxpupuli/puppet-allknowingdns/pull/49) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v3.0.0](https://github.com/voxpupuli/puppet-allknowingdns/tree/v3.0.0) (2021-09-17)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-allknowingdns/compare/v2.0.0...v3.0.0)
