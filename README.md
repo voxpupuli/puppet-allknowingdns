@@ -31,11 +31,11 @@ The problem with IPv6 reverse DNS and traditional nameservers is that the namese
 
 AllKnowingDNS instead generates PTR and AAAA records on the fly. You only configure which network you want to serve and what your entries should look like.
 
-A [Puppet Module](http://docs.puppetlabs.com/learning/modules1.html#modules) is a collection of related content that can be used to model the configuration of a discrete service.
+A [Puppet Module](https://puppet.com/docs/puppet/latest/modules.html) is a collection of related content that can be used to model the configuration of a discrete service.
 
 # Module description
 
-- [puppet-allknowingdns](http://forge.puppetlabs.com/voxpupuli/allknowingdns) on puppet forge.
+- [puppet-allknowingdns](https://forge.puppet.com/modules/puppet/allknowingdns/) on puppet forge.
 
 ## Dependencies
 
