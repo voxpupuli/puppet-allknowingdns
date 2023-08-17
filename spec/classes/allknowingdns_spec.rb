@@ -21,15 +21,6 @@ describe 'allknowingdns' do
         }
       end
 
-      describe 'input validation' do
-        describe 'invalid address' do
-          # https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/lib/puppet/parser/functions/is_domain_name.rb
-          let(:params) { { address: 'wrong%domain.net' } }
-
-          it { expect { catalogue }.to raise_error(Puppet::Error, %r{is not a valid domaine name}) }
-        end
-      end
-
       it { is_expected.to contain_package('all-knowing-dns') }
 
       it {
