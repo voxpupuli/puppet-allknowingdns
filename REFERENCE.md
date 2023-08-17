@@ -70,7 +70,7 @@ Default value: `'UNSET'`
 
 ##### <a name="-allknowingdns--address"></a>`address`
 
-Data type: `String[1]`
+Data type: `Stdlib::Fqdn`
 
 Specifies the address to which PTR records should resolve. When answering AAAA queries, %DIGITS% will be parsed and converted back to an IPv6 address.
 
