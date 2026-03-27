@@ -17,7 +17,7 @@ describe 'allknowingdns' do
         {
           listen: ['2001:4d88:100e:1::3', '79.140.39.197'],
           network: '2001:4d88:100e:ccc0::/64',
-          address: 'nutzer.raumzeitlabor.de'
+          address: 'nutzer.raumzeitlabor.de',
         }
       end
 
@@ -29,7 +29,7 @@ describe 'allknowingdns' do
           enable: true,
           hasstatus: true,
           hasrestart: true,
-          require: 'Package[all-knowing-dns]'
+          require: 'Package[all-knowing-dns]',
         )
       }
 
@@ -40,7 +40,7 @@ describe 'allknowingdns' do
           group: 'root',
           mode: '0644',
           notify: 'Service[all-knowing-dns]',
-          require: 'Package[all-knowing-dns]'
+          require: 'Package[all-knowing-dns]',
         )
       }
 
