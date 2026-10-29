@@ -16,7 +16,7 @@ Install and configure allknowingdns using puppet.
 
 #### Examples
 
-##### 
+#####
 
 ```puppet
 class { 'allknowingdns':
@@ -26,7 +26,7 @@ class { 'allknowingdns':
 }
 ```
 
-##### 
+#####
 
 ```puppet
 class { 'allknowingdns':
@@ -107,4 +107,3 @@ Data type: `String[1]`
 All-knowing-dns package name (depends on distribution)
 
 Default value: `'all-knowing-dns'`
-
